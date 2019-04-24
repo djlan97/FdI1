@@ -1,0 +1,5 @@
+4
+ prima_riga  =	5.683e-3
+	frase_con_tanti_spazi  = 4.3
+terza_riga=2.50e-2
+ultima_riga   =54.e-17

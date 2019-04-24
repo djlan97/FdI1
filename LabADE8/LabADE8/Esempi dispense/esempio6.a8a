@@ -1,0 +1,25 @@
+	jmp	Inizio
+S:	0
+Inizio:	ldv	0
+
+Ciclo:	
+	ld	S
+Somma:	add
+Cosa:	x
+	st	S
+	
+	ld	Cosa
+	addv	1
+	st	Cosa
+	
+	ld	N
+	subv	1
+	st	N
+	
+	jz	Fine
+	jmp	Ciclo
+	
+Fine:	jmp	Fine
+
+N:	10
+x:	12 16 27 2 41 79 5 28 3 30

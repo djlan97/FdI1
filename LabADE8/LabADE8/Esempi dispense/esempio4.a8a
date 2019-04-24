@@ -1,0 +1,12 @@
+Inizio:	LD	N
+	CMPv	0
+	JE	Fine
+	ADD	S
+	ST	S
+	LD	N
+	SUBv	1
+	ST	N
+	JMP	Inizio
+Fine:	JMP	Fine
+N:	5
+S:	0

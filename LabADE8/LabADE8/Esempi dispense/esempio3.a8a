@@ -1,0 +1,14 @@
+Inizio:	LD	B
+	CMPv	0	; B = 0?
+	JE	Fine
+	LD	C
+	ADD	A	; C <- C + A
+	ST	C
+	LD	B
+	SUBv	1	; B <- B - 1
+	ST	B
+	JMP	Inizio
+Fine:	JMP	Fine
+A:	3	; Moltiplicando
+B:	5	; Moltiplicatore
+C:	0	; Prodotto

@@ -1,0 +1,17 @@
+Ciclo:
+	ldi	P
+	cmpv	0
+	je	Fine
+	
+	st	0d1h
+	
+	ld	P
+	addv	1
+	st	P
+	
+	jmp	Ciclo
+	
+Fine:	jmp	Fine
+
+P:	msg
+msg:	'Hello world!' 0

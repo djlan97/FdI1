@@ -1,0 +1,26 @@
+	ldv	msg
+	jmp	Display
+
+Fine:	jmp	Fine
+msg:	'Hello world!' 0
+
+; Blocco di istruzioni per visualizzare il 
+; messaggio contenuto in ACC
+Display:
+	st	P
+Ciclo:
+	ldi	P
+	cmpv	0
+	je	DisplayFine
+	
+	st	0d1h
+	
+	ld	P
+	addv	1
+	st	P
+	
+	jmp	Ciclo
+	
+DisplayFine:
+	jmp	Fine
+P:	0

@@ -1,0 +1,26 @@
+	ldv	48h
+	st	0d1h
+	ldv	65h
+	st	0d1h
+	ldv	6ch
+	st	0d1h
+	ldv	6ch
+	st	0d1h
+	ldv	6fh
+	st	0d1h
+	ldv	20h
+	st	0d1h
+	ldv	77h
+	st	0d1h
+	ldv	6fh
+	st	0d1h
+	ldv	72h
+	st	0d1h
+	ldv	6ch
+	st	0d1h
+	ldv	64h
+	st	0d1h
+	ldv	21h
+	st	0d1h
+	
+Fine:	jmp	Fine

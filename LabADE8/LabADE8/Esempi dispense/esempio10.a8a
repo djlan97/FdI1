@@ -1,0 +1,20 @@
+Ciclo:
+	ldi	P
+	st	0d1h
+	
+	ld	P
+	addv	1
+	st	P
+	
+	ld	N
+	subv	1
+	st	N
+	
+	jz	Fine
+	jmp	Ciclo
+	
+Fine:	jmp	Fine
+
+N:	12
+P:	msg
+msg:	'H' 'e' 'l' 'l' 'o' ' ' 'w' 'o' 'r' 'l' 'd' '!'

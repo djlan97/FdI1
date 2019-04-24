@@ -1,0 +1,25 @@
+	jmp	Inizio
+S:	0
+Inizio:	ldv	x
+	st	P
+
+Ciclo:	ldi	P
+	add	S
+	st	S
+	
+	ld	P
+	addv	1
+	st	P
+	
+	ld	N
+	subv	1
+	st	N
+	
+	jz	Fine
+	jmp	Ciclo
+	
+Fine:	jmp	Fine
+
+N:	10
+x:	12 16 27 2 41 79 5 28 3 30
+P:	0

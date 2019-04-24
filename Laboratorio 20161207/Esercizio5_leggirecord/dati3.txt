@@ -1,0 +1,4 @@
+5
+ prima_riga  =	5.683e-3
+	seconda_frase= 4.3
+terza_riga

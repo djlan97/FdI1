@@ -1,0 +1,38 @@
+;Per capire è utili ricordarsi il metodo di risoluzione dell'MCD che ha spiegato
+;Ho trovato l'MCD quando M = N quindi all'inizio di ogni ciclo controllo se sono uguali.
+;Se sono uguali salvo uno dei due valori (uno vale l'altro perchè sono uguali) in MCD e visualizzo
+cond:	ld	M
+	cmp	N
+	je	equal
+;Se non sono uguali guardo se il primo è minore del secondo e nel caso li scambio
+	jlu	swap
+;Se il primo è maggiore sottraggo il secondo al primo (sott)
+	jmp	sott
+;Scambio i due numeri facendo Stack <- M, M <- N, N <- Stack
+;Lo stack lo uso solo una volta per salvare e solo una per leggere i valori quindi è come se fosse una variabile
+;quindi lo stack poteva essere sostituito da una variabile D per esempio
+swap:	ld	M
+	push
+	ld	N
+	st	M
+	pop
+	st	N
+	jmp	sott
+;Sottraggo il secondo numero dal primo e salvo in M poi controllo di nuovo se sono uguali o se il primo è più piccolo del secondo
+sott:	ld	M
+	sub	N
+	st	M
+	jmp	cond
+;Quando sono uguali ho finito
+equal:	st	MCD
+	jmp	stampa
+;Stampo il risultato
+stampa:	ld	MCD
+	st	0d0h
+fine:	jmp	fine
+	
+M:	42
+N:	14
+MCD:	0
+
+

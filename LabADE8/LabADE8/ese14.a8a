@@ -1,0 +1,18 @@
+;Quando il valore puntato da p è uguale a 0 la stringa è finita quindi stampo la lunghezza
+ciclo:	ldi	P
+	cmpv	0
+	je	stampa
+;Se il vaolore è diverso da 0 aggiungo 1 alla lunghezza e sposto avanti il puntatore poi ripeto
+	ld	L
+	addv	1
+	st	L
+	ld	P
+	addv	1
+	st	P
+	jmp	ciclo
+stampa:	ld	L
+	st	0d0h
+fine:	jmp	fine
+L:	0
+P:	msg
+msg:	'costantino'	0

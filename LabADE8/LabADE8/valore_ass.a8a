@@ -1,0 +1,13 @@
+		LD	A
+		CMPv	0
+		JLs	Negativo
+		JMP	Positivo
+		
+Negativo:	NEG
+
+Positivo:	ST	B
+
+Fine:		JMP	Fine
+
+A:		23
+B:		00h

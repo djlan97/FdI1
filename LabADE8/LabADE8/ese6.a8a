@@ -1,0 +1,17 @@
+	ld	A
+	st	C
+	ld	B
+	st	A
+	ld	C
+	st	B
+	
+	ld	A
+	st	0d0h
+	ld	B
+	st	0d0h
+	
+fine:	jmp	fine
+
+A:	3
+B:	6
+C:	0

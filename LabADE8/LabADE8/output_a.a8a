@@ -1,0 +1,4 @@
+		ld	A
+		st	0d0h
+Fine:		jmp	Fine
+A:	23

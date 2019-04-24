@@ -1,0 +1,47 @@
+; X0 = parte meno significativa, X1 = parte più significativa
+;Carico la parte meno significativa di A e la somma alla meno significativa di B salvandola in A0
+add1:	ld	A0
+	add	B0
+	st	A0
+;Se avviene un riporto lo salvo nella variabile D0 che mi servirà dopo nella somma della parte più significativa altrimenti
+;vado direttamente alla somma della parte più significativa
+	jc	rip0
+	jmp	add2
+;Riporto della prima parte (se presente, vedi sopra)
+rip0:	ldv	1
+	st	D0
+;Sommo la parte più significativa di A con B e la salvo in A1 poi controllo se avviene un riporto
+add2:	ld	A1
+	add	B1
+	st	A1
+;Se il riporto avviene lo salvo in D come richiesto (rip1)
+	jc	rip1
+;Aggiungo il riporto del calcolo della parte meno significativa(se presente)
+addRip:	ld	A1
+	add	D0
+	st	A1
+;Se dopo questa aggiunta si verifica un riporto lo metto in D come richiesto
+	jc	rip1
+;Stampo i dati
+	jmp	stampa
+;Salvo il riporto della parte più significativa(se presente, vedi sopra) e poi torno sopra per aggiungere il
+;riporto della parte meno significativa (se presente)(quella calcolata all'inizio (D0))
+rip1:	ldv	1
+	st	D
+	jmp	addRip
+;Stampo i dati nell'ordine: parte meno significativa, parte più significativa, riporto
+stampa:	ld	A0
+	st	0d0h
+	ld	A1
+	st	0d0h
+	ld	D
+	st	0d0h
+fine:	jmp	fine
+	
+
+A0:	255
+A1:	255
+B0:	255
+B1:	255
+D0:	0
+D:	0

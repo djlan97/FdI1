@@ -1,0 +1,21 @@
+;Carico a e salvo il contenuto nella parte meno significativa di B(B0)
+	ld	A
+	st	B0
+;Controllo se A è positivo o negativo e di conseguenza eseguo nega se negativo 
+	cmpv	0
+	jn	nega
+	jmp	stampa
+;B1 vale 00h perchè lo abbiamo definito sotto così ma se A è negativo deve valere FFh quindi lo nego
+nega:	ld	B1
+	NEG
+	st	B1
+;Stampo sulla porta 0 per comodità prima la parte meno significativa di B poi la più significativa
+stampa:	ld	B0
+	st	0d0h
+	ld	B1
+	st	0d0h
+fine:	jmp	fine
+
+A:	27
+B0:	0
+B1:	0

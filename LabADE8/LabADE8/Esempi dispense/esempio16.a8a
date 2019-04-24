@@ -1,0 +1,17 @@
+	ld	num
+	push
+	call	Doppio
+	st	doppio
+	pop
+Fine:	jmp	Fine
+
+num:	17
+doppio:	0
+
+; Funzione che raddoppia il parametro passato sullo stack
+Doppio:
+	lds	1
+	st	tmp
+	add	tmp
+	ret
+tmp:	0

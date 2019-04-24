@@ -1,0 +1,45 @@
+;Carico il mio numero
+	ld	A
+;Inizio la divisione per 100 per calcolare quande centinaia ho
+div100:	ld	A
+	cmpv	100
+;Quando il numero è più piccolo di 100 passo a dividere per 10 per contare le decine
+	jlu	div10
+	subv	100
+	st	A
+	ld	C
+	addv	1
+	st	C
+	jmp	div100
+;Conto le decine usando sempre la divisione e quando il numero è più piccolo di 10 allora sono rimaste solo le unità quindi
+;salvo il contenuto in U
+div10:	ld	A
+	cmpv	10
+	jlu	div1
+	subv	10
+	st	A
+	ld	D
+	addv	1
+	st	D
+	jmp	div10
+div1:	st	U
+;Ora ho 3 variabili con Centinaia(C), Decine(D) e Unità(u) per stamparle devo trasformare il numero nel rispettivo carattere ascii
+; e dato che lo zero nella tabella ascii è 30h, 1 è 31h e così via aggiungo 30h a tutti i numeri e li stampo.
+stampa:	ld	C
+	addv	030h
+	st	0d1h
+	ld	D
+	addv	030h
+	st	0d1h
+	ld	U
+	addv	030h
+	st	0d1h
+fine:	jmp	fine
+
+;Centinaia
+C:	0
+;Decine
+D:	0
+;unità
+U:	0
+A:	134

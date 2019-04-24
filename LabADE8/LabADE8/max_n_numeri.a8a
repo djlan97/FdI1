@@ -1,0 +1,21 @@
+		ldv	A
+		st	P
+Ciclo:		ld	C
+		cmpi	P
+		jls	Massimo
+Continua:	ld	P
+		addv	1
+		st	P
+		ld	N
+		subv	1
+		st	N
+		jz	Fine
+		jmp	Ciclo
+Massimo:	ldi	P
+		st	C
+		jmp	Continua
+Fine:		jmp	Fine
+N:	10
+A:	12 16 27 2 41 79 5 28 3 30
+P:	0
+C:	0

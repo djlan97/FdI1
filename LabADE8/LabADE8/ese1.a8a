@@ -1,0 +1,6 @@
+	ld 	A
+	st	0D0h
+fine:	jmp	fine
+
+
+A:	255

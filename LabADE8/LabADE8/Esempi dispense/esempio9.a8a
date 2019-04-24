@@ -1,0 +1,26 @@
+	ldv	'H'
+	st	0d1h
+	ldv	'e'
+	st	0d1h
+	ldv	'l'
+	st	0d1h
+	ldv	'l'
+	st	0d1h
+	ldv	'o'
+	st	0d1h
+	ldv	' '
+	st	0d1h
+	ldv	'w'
+	st	0d1h
+	ldv	'o'
+	st	0d1h
+	ldv	'r'
+	st	0d1h
+	ldv	'l'
+	st	0d1h
+	ldv	'd'
+	st	0d1h
+	ldv	'!'
+	st	0d1h
+	
+Fine:	jmp	Fine

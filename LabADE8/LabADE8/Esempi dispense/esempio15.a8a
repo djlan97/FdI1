@@ -1,0 +1,14 @@
+	ld	num
+	call	Doppio
+	st	doppio
+Fine:	jmp	Fine
+
+num:	17
+doppio:	0
+
+; Funzione che raddoppia l'ACC
+Doppio:
+	st	tmp
+	add	tmp
+	ret
+tmp:	0

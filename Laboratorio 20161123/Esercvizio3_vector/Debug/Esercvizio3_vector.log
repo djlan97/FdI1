@@ -1,0 +1,11 @@
+﻿Compilazione avviata 01/03/2017 10:37:46.
+     1>Progetto "C:\Users\Dylan\Documents\Visual Studio 2013\Projects\Fondamenti 1\Laboratorio 20161123\Esercvizio3_vector\Esercvizio3_vector.vcxproj" sul nodo 2 (destinazioni: Build).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt main.c
+         main.c
+     1>c:\users\dylan\documents\visual studio 2013\projects\fondamenti 1\laboratorio 20161123\esercvizio3_vector\main.c(6): error C4700: utilizzata variabile locale 'vettore' non inizializzata
+     1>Compilazione progetto "C:\Users\Dylan\Documents\Visual Studio 2013\Projects\Fondamenti 1\Laboratorio 20161123\Esercvizio3_vector\Esercvizio3_vector.vcxproj" (destinazioni: Build) NON COMPLETATA.
+
+Compilazione NON RIUSCITA.
+
+Tempo trascorso 00:00:00.35

@@ -1,0 +1,14 @@
+	ld	A
+	andv	1
+	jz	pari
+	ldv	1
+	st	D
+	jmp	stampa
+pari:	ldv	0
+	st	D
+stampa:	ld	D
+	st	0d0h
+fine:	jmp	fine
+
+A:	4
+D:	0

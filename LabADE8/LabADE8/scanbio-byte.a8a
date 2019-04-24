@@ -1,0 +1,10 @@
+		LD	A
+		ST	C
+		LD	B
+		ST	A
+		LD	C
+		ST	B
+Fine:		JMP	Fine
+A:	02h
+B:	03h
+C:	0

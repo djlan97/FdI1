@@ -1,0 +1,16 @@
+	ld	A
+	add	B
+	st	C
+	jc	carry
+	ldv	0
+	st	D
+	jmp	fine
+carry:	ldv	1
+	st	D
+	st	0d0h
+fine:	jmp 	fine
+
+A:	255
+B:	1
+C:	0
+D:	0

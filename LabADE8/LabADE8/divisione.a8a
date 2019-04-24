@@ -1,0 +1,16 @@
+		ld	A
+		st	R
+Divisione:	ld	R
+		cmp	B
+		jlu	Fine
+		sub	B
+		st	R
+		ld	Q
+		addv	1
+		st	Q
+		jmp	Divisione
+Fine:		jmp	Fine
+A:	6
+B:	2
+Q:	0
+R:	0

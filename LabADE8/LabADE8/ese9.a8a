@@ -1,0 +1,51 @@
+;Visualizza il massimo di un vettore A di lunghezza N
+;Se N è uguale a 0 non ci sono elementi da confrontare e vado alla fine
+;Decremento N di 1 perchè ho scelto di controllare tutti gli altri (N-1) confrontandoli con il primo (Vedi primo commento sotto)
+	ld	N
+	cmpv	0
+	je	stampa
+	subv	1
+	st	N
+;Assegno il primo valore del vettore a C in modo che non mi dia risultato 0 se tutti i numeri sono negativi
+	ldi	P
+	st	C
+
+;Sposto P in avanti di 1 per controllare il secondo
+	ld	P
+	addv	1
+	st	P
+;Carico N e controllo se è a 0 nel caso ho finito gli elementi da analizzare e stampo C altrimenti decremento N di 1
+ciclo:	ld 	N
+	cmpv	0
+	je	stampa
+	subv	1
+	st	N
+;Carico C e la confronto con il valore puntato da P se C è inferiore allora non può essere il massimo e
+;aggiorno il valore di C mettendoci il valore puntato da P (Cmin = C è il più basso) e poi eseguo Cmax altrimenti
+;vado direttamente a Cmax	
+	ld	C
+	cmpi	P
+	jls	Cmin
+	jmp	Cmax
+;Se P > C allora C <- P
+Cmin:	ldi	P
+	st	C
+;Se C > P o ho già aggiornato il suo valore aumento P di 1 cos' punta al valore successivo e ripeto il ciclo
+Cmax:	ld	P
+	addv	1
+	st	P
+	jmp	ciclo
+;Metto il risultato nel display per comodità
+stampa:	ld	C
+	st	0d0h
+fine:	jmp	fine
+	
+
+;puntatore
+P:	A
+;risultato
+C:	0
+;numero di elementi in A
+N:	5
+;vettore
+A:	-5	3	7	-2	9

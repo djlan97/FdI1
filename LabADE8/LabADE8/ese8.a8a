@@ -1,0 +1,42 @@
+;I numeri sono in little endian quindi la parte 0 (es A0) è quella che vale meno del numero (es il numero FD sarà A0= D e A1 = F)
+;Carry = riporto
+
+;Carico la prima parte del numero A e sommo B	
+	ld	A0
+	add	B
+;Salvo il risultato nella prima parte di C e salto a ca(carry sulla prima parte di A(A0)) se è avvenuto un riporto
+	st	C0
+	jc	ca
+;Se non è avvenuto nessun riporto salvo il valore di A1 in C1 perchè non sarà cambiato e salto a noC (no carry)
+	ld	A1
+	st	C1
+	jmp	noC
+;Se è avvenuto un riporto sulla prima parte di A(A0) devo aggiungere ad A1 1 e salvo in C1
+;Se anche qui è avvenuto un riporto metto un uno in D come richiesto dall'esercizio (cd = carry su d) altrimenti eseguo noC (no carry)
+ca:	ld	A1
+	addv	1
+	st	C1
+	jc	cd
+;Se non c'è riporto metto a 0 la D
+noC:	ldv	0
+	st	D
+	jmp	stampa
+;Se è avvenuto un riporto metto a 1 la D
+cd:	ldv	1
+	st	D
+;Stampo in ordine risultato della prima parte, della seconda parte e di D per comodità
+stampa:	ld	C0
+	st	0d0h
+	ld	C1
+	st	0d0h
+	ld	D
+	st	0d0h
+;fine
+fine:	jmp	fine
+	
+A0:	255
+A1:	255
+B:	5
+C0:	0
+C1:	0
+D:	0

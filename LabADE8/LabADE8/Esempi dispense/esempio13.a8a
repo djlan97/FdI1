@@ -1,0 +1,31 @@
+	ldv	Return1
+	st	DisplayReturnAddress
+	ldv	msg1
+	jmp	Display
+Return1:
+	ldv	Return2
+	st	DisplayReturnAddress
+	ldv	msg2
+	jmp	Display
+Return2:
+Fine:	jmp	Fine
+
+msg1:	'Hello ' 0
+msg2:	'world!' 0
+
+; Funzione per visualizzare il messaggio contenuto in ACC
+Display:
+	st	P
+Ciclo:	ldi	P
+	cmpv	0
+	je	DisplayFine
+	st	0d1h
+	ld	P
+	addv	1
+	st	P
+	jmp	Ciclo
+DisplayFine:
+	jmp
+DisplayReturnAddress:
+	0
+P:	0

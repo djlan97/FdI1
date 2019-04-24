@@ -1,0 +1,25 @@
+	ldv	msg1
+	call	Display
+
+	ldv	msg2
+	call	Display
+
+Fine:	jmp	Fine
+
+msg1:	'Hello ' 0
+msg2:	'world!' 0
+
+; Funzione per visualizzare il messaggio contenuto in ACC
+Display:
+	st	P
+Ciclo:	ldi	P
+	cmpv	0
+	je	DisplayFine
+	st	0d1h
+	ld	P
+	addv	1
+	st	P
+	jmp	Ciclo
+DisplayFine:
+	ret
+P:	0

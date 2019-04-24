@@ -1,0 +1,11 @@
+﻿Compilazione avviata 04/12/2016 16:23:24.
+     1>Progetto "C:\Users\Dylan\Desktop\Esercizi C\Laboratorio 20161026\Esercizio5_exp\Esercizio5_exp.vcxproj" sul nodo 2 (destinazioni: ClCompile).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt matematica.c
+         matematica.c
+     1>c:\users\dylan\desktop\esercizi c\laboratorio 20161026\esercizio5_exp\matematica.c(16): warning C4018: '<': errata corrispondenza tra signed e unsigned
+     1>Compilazione progetto "C:\Users\Dylan\Desktop\Esercizi C\Laboratorio 20161026\Esercizio5_exp\Esercizio5_exp.vcxproj" (destinazioni: ClCompile) completata.
+
+Compilazione completata.
+
+Tempo trascorso 00:00:00.23

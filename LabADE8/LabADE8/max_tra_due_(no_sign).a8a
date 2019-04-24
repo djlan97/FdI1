@@ -1,0 +1,11 @@
+		LD	A
+		CMP	B		
+		JLu	Minore
+		JMP	MaggUg
+Minore:		LD	B
+MaggUg:		ST	C
+Fine:		JMP	Fine
+
+A:	2
+B:	1
+C:	0

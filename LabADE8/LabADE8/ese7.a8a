@@ -1,0 +1,24 @@
+ciclo:	ld	A
+	cmp	B
+	jlu	finDiv
+	ld	Q
+	addv	1
+	st	Q
+	ld	A
+	sub	B
+	st	A
+	jmp	ciclo
+finDiv:	ld	A
+	st	R
+	
+	ld	Q
+	st	0d0h
+	ld	R
+	st	0d0h
+
+fine:	jmp 	fine
+	
+A:	17
+B:	5
+Q:	0
+R:	0

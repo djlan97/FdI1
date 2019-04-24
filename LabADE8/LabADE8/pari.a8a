@@ -1,0 +1,13 @@
+		LD	A
+		ANDv	1
+		CMPv	0
+		JE	Pari
+		JMP	Dispari
+Pari:		LDv	1
+		ST	B
+		JMP	Fine
+Dispari:	LDv	0
+		ST	B		
+Fine:		JMP	Fine
+A:		23
+B:		0
