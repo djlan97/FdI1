@@ -1,0 +1,10 @@
+﻿Compilazione avviata 06/12/2016 21:49:41.
+     1>Progetto "C:\Users\Dylan\Desktop\Esercizi C\Esercizio2.4_semifattoriale\Esercizio2.4_semifattoriale.vcxproj" sul nodo 2 (destinazioni: Build).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Dylan\Desktop\Esercizi C\Esercizio2.4_semifattoriale\Debug\Esercizio2.4_semifattoriale.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Dylan\Desktop\Esercizi C\Esercizio2.4_semifattoriale\Debug\Esercizio2.4_semifattoriale.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Dylan\Desktop\Esercizi C\Esercizio2.4_semifattoriale\Debug\Esercizio2.4_semifattoriale.lib" /MACHINE:X86 Debug\main.obj
+         Esercizio2.4_semifattoriale.vcxproj -> C:\Users\Dylan\Desktop\Esercizi C\Esercizio2.4_semifattoriale\Debug\Esercizio2.4_semifattoriale.exe
+     1>Compilazione progetto "C:\Users\Dylan\Desktop\Esercizi C\Esercizio2.4_semifattoriale\Esercizio2.4_semifattoriale.vcxproj" (destinazioni: Build) completata.
+
+Compilazione completata.
+
+Tempo trascorso 00:00:00.67

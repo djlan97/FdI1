@@ -1,0 +1,11 @@
+﻿Compilazione avviata 26/12/2016 11:12:37.
+     1>Progetto "C:\Users\Dylan\Documents\Visual Studio 2013\Projects\Esercizio2.16_geometria_distanza\Esercizio2.16_geometria_distanza.vcxproj" sul nodo 2 (destinazioni: Build).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Dylan\Documents\Visual Studio 2013\Projects\Esercizio2.16_geometria_distanza\Debug\Esercizio2.16_geometria_distanza.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Dylan\Documents\Visual Studio 2013\Projects\Esercizio2.16_geometria_distanza\Debug\Esercizio2.16_geometria_distanza.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Dylan\Documents\Visual Studio 2013\Projects\Esercizio2.16_geometria_distanza\Debug\Esercizio2.16_geometria_distanza.lib" /MACHINE:X86 Debug\geometria.obj
+         Debug\main.obj
+         Esercizio2.16_geometria_distanza.vcxproj -> C:\Users\Dylan\Documents\Visual Studio 2013\Projects\Esercizio2.16_geometria_distanza\Debug\Esercizio2.16_geometria_distanza.exe
+     1>Compilazione progetto "C:\Users\Dylan\Documents\Visual Studio 2013\Projects\Esercizio2.16_geometria_distanza\Esercizio2.16_geometria_distanza.vcxproj" (destinazioni: Build) completata.
+
+Compilazione completata.
+
+Tempo trascorso 00:00:00.53
